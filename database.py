@@ -3,8 +3,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from psycopg2.extras import RealDictCursor
 import psycopg2
+import os
 
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:14567t1803@localhost/fastapi"
+##SQLALCHEMY_DATABASE_URL = "postgresql://postgres:14567t1803@localhost/fastapi"
+
+SQLALCHEMY_DATABASE_URL = os.environ['DATABASE_URL']
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
