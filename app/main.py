@@ -5,6 +5,7 @@ from . import models
 from .database import engine
 from app.routers import user
 from app.routers import post, auth
+from .config import settings
 
 models.Base.metadata.create_all(bind=engine)
 
