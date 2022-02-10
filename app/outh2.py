@@ -2,7 +2,7 @@ from datetime import datetime
 #from typing import Optional
 from jose import JWTError, jwt
 from pydantic.datetime_parse import timedelta
-import schemas
+from . import schemas
 from fastapi import HTTPException, Depends, status
 from fastapi.security import OAuth2PasswordBearer
 
