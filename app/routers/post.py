@@ -3,8 +3,8 @@ from typing import List
 from fastapi import HTTPException, status, Depends, APIRouter
 from sqlalchemy.orm import Session
 from .. import models, outh2
-from ..database import  get_db
-from ..schemas import PostDetails, PostResponse
+from app.database import  get_db
+from app.schemas import PostDetails, PostResponse
 
 router = APIRouter(
     prefix="/posts",
